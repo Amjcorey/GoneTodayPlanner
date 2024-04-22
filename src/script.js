@@ -5,8 +5,8 @@ $(document).ready(function () {
   //Display current date in header
   function displayDate() {
     let date = dayjs().format("dddd, MMM D YYYY");
-    $(".currentDay").text(date);
-    console.log(date);
+    $("#currentDay").text(date);
+    // console.log(date);
   }
 
   // Add a listener for click events on the save button. This code should
@@ -63,9 +63,12 @@ $(document).ready(function () {
     });
   }
 
-  // Add code to display the current date in the header of the page.
-  // Call the displayCurrentDay and createTimeBlocks functions
+  // Call functions
   displayTimeBlocks();
+  displayDate();
 
   // Update the time blocks every minute to check for past, present, or future
+  setInterval(function () {
+    displayTimeBlocks();
+  }, 60000);
 });
