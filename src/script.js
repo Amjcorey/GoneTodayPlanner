@@ -54,13 +54,13 @@ let currentTime = dayjs().hour();
     $(this).removeClass("future");
   }
   else if (timeBlock === currentTime) {
-    $(this).addClass("past");
+    $(this).removeClass("past");
     $(this).addClass("present");
-    $(this).addClass("future");
+    $(this).removeClass("future");
   } 
   else {
-    $(this).addClass("past");
-    $(this).addClass("present");
+    $(this).removeClass("past");
+    $(this).removeClass("present");
     $(this).addClass("future");
   }
 
