@@ -50,6 +50,16 @@ let currentTime = dayjs().hour();
 
   if (timeBlock < currentTime) {
     $(this).addClass("past");
+    $(this).removeClass("present");
+    $(this).removeClass("future");
+  }
+  else if (timeBlock === currentTime) {
+    $(this).addClass("past");
+    $(this).addClass("present");
+    $(this).addClass("future");
+  } 
+  else {
+    $(this).addClass("past");
     $(this).addClass("present");
     $(this).addClass("future");
   }
