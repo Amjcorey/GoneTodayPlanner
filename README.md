@@ -9,7 +9,7 @@ https://drive.google.com/file/d/1NM6u13eoE9WGQ6lRZCqcuChQXn71kVgv/view
 Display basic use of app.
 
 ## Screenshots
-![](img\work-day-scheduler.png)
+![work-day-scheduler](img\work-day-scheduler.png)
 
 ## Credits
 Starter code (https://github.com/coding-boot-camp/crispy-octo-meme)
