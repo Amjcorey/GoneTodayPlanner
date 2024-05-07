@@ -3,6 +3,13 @@ $(document).ready(function () {
   // Get current hour using dayjs and display in header
   let currentHour = dayjs().hour();
 
+  //Display current date in header
+  function displayDate() {
+    let date = dayjs().format("dddd, MMM D YYYY");
+    $("#currentDay").text(date);
+    // console.log(date);
+  }
+
   // Grabs all save button elements on the html so they can be manipulated in the DOM
   let saveBtnElement = document.getElementsByClassName("saveBtn");
 
@@ -62,7 +69,15 @@ $(document).ready(function () {
       timeBlock.classList.remove("present");
     }
   }
+
+  // Call functions
+  displayDate();
 });
+
+
+
+
+
 // Old code below is a reference to how one would re-write lines using JQUERY
 
 // Adds past, present, future class to each time block by comparing the id to the current hour using dayjs().hour(). (JQUERY DRAFT 1)
@@ -104,5 +119,3 @@ $(document).ready(function () {
 // }
 
 // }
-
-//
